@@ -1,4 +1,5 @@
 {
+  "version": 2,
   "builds": [
     {
       "src": "app.py",
@@ -15,7 +16,7 @@
       "dest": "index.html"
     },
     {
-      "src": "/(.*\\.(css|js|html|png|jpg|ico))",
+      "src": "/(.*)",
       "dest": "/$1"
     }
   ]
