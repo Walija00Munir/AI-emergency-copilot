@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency AI Co-Pilot</title>
+    <meta name="description" content="Instant AI guidance for emergencies and crises.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-glow"></div>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <span class="pulse-ring"></span>
+                <h1>🚨 AI Co-Pilot</h1>
+            </div>
+            <p class="subtitle">Universal Emergency Specialist</p>
+        </header>
+
+        <main>
+            <div class="input-card glass-panel">
+                <label for="problemInput">Describe the emergency...</label>
+                <textarea id="problemInput" placeholder="e.g. Server is down and returning 500 errors, or someone is choking..."></textarea>
+                <button id="submitBtn" class="primary-btn">
+                    <span class="btn-text">Get Immediate Advice</span>
+                    <div class="loader hidden"></div>
+                </button>
+            </div>
+
+            <div id="resultContainer" class="result-card glass-panel hidden" aria-live="polite">
+                <div class="result-header">
+                    <span id="resType" class="badge">Category</span>
+                    <span id="resSeverity" class="severity-badge severity-high">Severity: 5</span>
+                </div>
+                
+                <div class="result-summary">
+                    <h3>Overview</h3>
+                    <p id="resSummary">Summary goes here.</p>
+                </div>
+
+                <div class="result-steps">
+                    <h3>Action Steps</h3>
+                    <ul id="resStepsList">
+                        <!-- Steps inserted by JS -->
+                    </ul>
+                </div>
+
+                <button id="resetBtn" class="secondary-btn">
+                    <span>Ask Another Question</span>
+                </button>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Powered by Gemini 2.0 Flash</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
